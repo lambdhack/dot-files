@@ -1,0 +1,35 @@
+#!\bin\bash
+# i3 panel config. Powerline style.
+
+panel_fifo="/tmp/i3_lemonbar_${USER}"
+geometry="x20"
+font="SauceCodePro Nerd Font Mono:style=Bold"
+iconfont="SauceCodePro Nerd Font Mono:style=Bold"
+res_w=$(xrandr | grep "current" | awk '{print $8a}')
+snd_cha=$(amixer get Master | grep "Playback channels:" | awk '{if ($4 == "") {printf "%s: Playback", $3} else {printf "%s %s: Playback", $3, $4}}')
+
+# color definitions 
+color_red="#b30000"
+color_white="#FFC5C8C6"
+color_black="#FF282A2E"
+
+#default space between sections
+stab=' '
+
+# Icon from nerdfont
+sep_left=""                        # Powerline separator left
+sep_right=""                       # Powerline separator right
+icon_clock="\uf64f"                 # Clock icon
+icon_cal="\uf073"                   # Calendar icon
+icon_cpu="\uf85a"                   # CPU icon
+icon_mem="\uf9c4"                   # MEM icon
+icon_dl="\uf546"                    # Download icon
+icon_ul="\uf0aa"                    # Upload icon
+icon_vol="\uf028"                   # Volume icon
+icon_prog="\uf303\uf31a\uf315"      # Window icon
+icon_loc="\uf450"                   # Location icon
+icon_bat_100="\uf240"               # Battery icon 100%
+icon_bat_75="\uf241"                # Battery icon 75%
+icon_bat_50="\uf242"                # Battery icon 50%
+icon_bat_25="\uf243"                # Battery icon 25%
+icon_bat_0="\uf244"                 # Battery icon 0%
