@@ -53,19 +53,6 @@ while read -r line ; do
         netd="%{F${color_red}}${sep_left}%{F${color_black} B${color_red}}  ${icon_dl} ${netd_v}"
         netu="%{F${color_black}}${sep_left}%{F${color_white} B${color_black}} ${icon_ul} ${netu_v}"
       fi
-      #location
-      #
-      #
-      #  TODO: if connection < 1KB/s add option to set location to 'somwhere in the matrix'
-      #
-      #
-      if [ "${sys_arr[9]}" != "down" ] || [ "${sys_arr[11]}" != "down" ]; then
-      	loc="$(wget -qO- https://ipinfo.io/country)"
-      	location="%{F${color_red}}${sep_left}%{F${color_black} B${color_red}} ${icon_loc} $loc"
-      else
-	loc="localhost"
-	location="%{F${color_red}}${sep_left}%{F${color_black} B${color_red}} ${icon_loc} $loc"
-      fi
       # Volume
       vol="$(awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master))"
       volume="%{F${color_red}}${sep_left}%{F${color_black} B${color_red}} ${icon_vol} ${vol}"
@@ -79,5 +66,5 @@ while read -r line ; do
   esac
 
   # And finally, output
-  echo -e "%{l}${title} %{r}${cpu}${stab}${mem}${stab}${netd}${stab}${netu}${stab}${location}${stab}${bat}${stab}${volume}${stab}%{A:galendae:}${date}%{A}${stab}${time}"
+  echo -e "%{l}${title} %{r}${cpu}${stab}${mem}${stab}${netd}${stab}${netu}${stab}${location}${stab}${ethereum}${stab}${bat}${stab}${volume}${stab}%{A:galendae:}${date}%{A}${stab}${time}"
 done

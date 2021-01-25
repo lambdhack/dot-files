@@ -10,8 +10,8 @@ snd_cha=$(amixer get Master | grep "Playback channels:" | awk '{if ($4 == "") {p
 
 # color definitions 
 color_red="#b30000"
-color_white="#FFC5C8C6"
-color_black="#FF282A2E"
+color_white="#d3ddf2"
+color_black="#282a2e"
 
 #default space between sections
 stab=' '
@@ -33,3 +33,4 @@ icon_bat_75="\uf241"                # Battery icon 75%
 icon_bat_50="\uf242"                # Battery icon 50%
 icon_bat_25="\uf243"                # Battery icon 25%
 icon_bat_0="\uf244"                 # Battery icon 0%
+icon_eth="\ufcb9"                   # Ethereum icon

@@ -1,0 +1,40 @@
+configuration {
+    show-icons:   false;
+    sidebar-mode: false;
+
+    // The display name of this browser
+    display-drun: ">_";
+ }
+
+* {
+    // Default bg is transparent.
+    background-color: transparent;
+    // Default text is white
+    text-color: white;
+    spacing: 15;
+    position: center;
+}
+
+#window {
+    // Default font
+    font: "SauceCodePro Nerd Font Mono bold 15";
+    fullscreen: true;
+    transparency: "background";
+
+    background-color: #25293630;
+   
+    // Add dummy widgets on top and bottom so the sizing
+    // nicely centers hdum, independent of resolution. 
+    children: [ dummy0, hdum, dummy0 ];
+}
+
+#hdum {
+    orientation: horizontal;
+    // Add dummy widgets on left and right so the sizing
+    // nicely centers mainbox, independent of resolution. 
+    children: [ dummy0, mainbox, dummy0 ];
+}
+
+#element selected {
+    text-color: #b30000;
+}
