@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 1,
+    "markdown-preview-enhanced.codeBlockTheme": "atom-dark.css",
+    "python.showStartPage": false,
+    "editor.cursorBlinking": "expand",
+    "editor.wordWrap": "on"
+}
