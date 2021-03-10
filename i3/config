@@ -61,6 +61,10 @@ exec_always feh --bg-scale $HOME/.config/i3/Void-wallpaper-1.png
 exec_always killall glava
 exec_always glava -d
 
+# Start deadd-notification-center
+exec_always killall deadd-notification-center
+exec_always deadd-notification-center 
+
 ## run once
 exec compton --config $HOME/.config/compton/compton.conf
 
